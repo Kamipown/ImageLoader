@@ -10,9 +10,7 @@ function load_end()
 {
 	document.getElementById("loading_div").style.display = "none";
 	for (var i = 0; i < Rcs.images.length; ++i)
-	{
-		ctx.drawImage(Rcs.images[i], i * 32, i % 10);
-	}
+		ctx.drawImage(Rcs.images[i], i % 10 * 32, Math.floor(i / 10) * 32);
 }
 
 function load_tick(progression)
